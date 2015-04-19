@@ -87,7 +87,7 @@ public class MyBinder : DataTablesBinder
     }
 	
 	// Override MapAditionalProperties so you can set your aditional data into the model:
-    protected override void MapAditionalColumns(IDataTablesRequest requestModel, System.Collections.Specialized.NameValueCollection requestParameters)
+    protected override void MapAditionalProperties(IDataTablesRequest requestModel, System.Collections.Specialized.NameValueCollection requestParameters)
     {
             var myModel = (MyCustomRequest)requestModel;
             myModel.MyCustomProp = Get<string>(requestParameters, "myCustomProp");
